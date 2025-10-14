@@ -11,6 +11,7 @@
       padding: 30px;
       background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
       color: #fff;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -56,21 +57,34 @@
       opacity: 0.5;
     }
 
-    img {
-      width: 120px;
-      margin: 10px;
-      border-radius: 10px;
+    /* Penguin container */
+    .penguins {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .penguin {
+      position: absolute;
+      width: 80px;
+      animation: floatPenguin 6s infinite ease-in-out;
+    }
+
+    @keyframes floatPenguin {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
     }
   </style>
 </head>
 <body>
   <h1>Elin, will you be my girlfriend? 💖</h1>
 
-  <!-- Penguin images -->
-  <div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Emperor_Penguin_Manchot_empereur.jpg" alt="Penguin 1">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Adelie_penguin_pair_in_Antarctica.jpg" alt="Penguin 2">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Penguin_at_Antarctica.jpg" alt="Penguin 3">
+  <div class="penguins">
+    <img src="https://i.imgur.com/1K1k1dO.png" class="penguin" style="left:10%;" alt="Penguin 1">
+    <img src="https://i.imgur.com/4rG6p5U.png" class="penguin" style="left:40%;" alt="Penguin 2">
+    <img src="https://i.imgur.com/VGkzP2t.png" class="penguin" style="left:70%;" alt="Penguin 3">
   </div>
 
   <div class="buttons">
